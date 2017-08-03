@@ -13,7 +13,7 @@ gulp.task('script', function(){
 
 gulp.task('style', function(){
 	gulp.src(['node_modules/materialize-css/dist/css/materialize.css','assets/sass/main.scss'])
-	.pipe(sass().on('error', sass.logErros))
+	.pipe(sass().on('error', sass.logError))
 	.pipe(minifyCSS())
 	.pipe(concat('style.min.css'))
 	.pipe(gulp.dest('dist/css/'));
